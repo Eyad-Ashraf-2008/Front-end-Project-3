@@ -1,0 +1,132 @@
+@font-face {
+    font-family: Fraunces;
+    src: url(../font/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../font/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    font-family: Montserrat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 550px;
+    height: 420px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #000;
+    overflow: hidden;
+    display: flex;
+}
+
+.container .image {
+    width: 50%;
+    height: 100%;
+}
+
+.container .image .desktop {
+    width: 100%;
+    height: 100%;
+}
+
+.container .image .mobile {
+    display: none;
+}
+
+.container .text {
+    width: 50%;
+    height: 100%;
+    padding: 30px;
+}
+
+.container .text p:nth-child(1) {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: hsl(228, 12%, 48%);
+}
+
+.container .text h1 {
+    font-family: Fraunces;
+    margin-bottom: 20px;
+}
+
+.container .text h1+p {
+    color: hsl(228, 12%, 48%);
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.container .text div {
+    margin-bottom: 10px;
+}
+
+.container .text div span {
+    font-size: 30px;
+    font-family: Fraunces;
+    font-weight: bold;
+    color: hsl(158, 36%, 37%);
+    margin-right: 10px;
+}
+
+.container .text button {
+    width: 100%;
+    height: 50px;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    border: none;
+    transition: 0.5s;
+}
+
+.container .text button:hover{
+    background-color: hsl(156, 35%, 17%)
+}
+
+.container .text button svg {
+    text-align: center;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+@media (max-width:562px) {
+    .container {
+        width: 375px;
+        height: 700px;
+        display: block;
+    }
+    .container .image {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .container .image .desktop {
+        display: none;
+    }
+    
+    .container .image .mobile {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .container .text {
+        width: 100%;
+        height: 50%;
+        padding: 30px;
+    }
+}
